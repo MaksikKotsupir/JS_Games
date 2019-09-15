@@ -107,11 +107,13 @@ function move() {
         let b = snakeBody[snakeBody.length - 1].getAttribute('posY');
         snakeBody.push(document.querySelector('[posX = "' + a + '"][posY = "' + b + '"]'));
         createApple();
+        score++;
+        input.value = 'Your score:'+score;
    }
 
    if(snakeBody[0].classList.contains('snakeBody')) {
        setTimeout(() => {
-            alert('End of game!');
+            alert('End of game! Your score: '+score+' (apple)' );
        }, 200);
         
         clearInterval(interval);
