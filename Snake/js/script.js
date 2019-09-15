@@ -113,7 +113,7 @@ function move() {
 
    if(snakeBody[0].classList.contains('snakeBody')) {
        setTimeout(() => {
-            alert('End of game! Your score: '+score+' (apple)' );
+            alert('End of game! Your score: '+score+' apple' );
        }, 200);
         
         clearInterval(interval);
